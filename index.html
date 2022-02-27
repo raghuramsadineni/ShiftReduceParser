@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
+    <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css" />
+    <title>Shift Reduce Parser</title>
+    <!-- <script src="index.ts"></script> -->
+    <script src="index.js"></script>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <ion-app class="root">
+        <ion-header>
+            <ion-toolbar>
+                <ion-title class="toolbarTitle">Shift Reduce Parser</ion-title>
+            </ion-toolbar>
+        </ion-header>
+        <ion-content>
+            <div class="flexContainer">
+                <div class="leftContainer">
+                    <div class="expressionContainer">
+                        <ion-item class="inputItemContainer">
+                            <ion-input id="inputValueExpression" placeholder="Enter Expression with spaces"></ion-input>
+                        </ion-item>
+                        <ion-button color="primary" onclick="ValidateExpression()">Evaluate</ion-button>
+                    </div>
+                    <ion-card class="cardFullContainer">
+                        <ion-card-title>Production Rules :</ion-card-title>
+                        <div class="borderBottom"></div>
+                        <ion-card-subtitle id="productionRules" class="cardContainer" />
+                    </ion-card>
+                    <ion-card class="cardFullContainer">
+                        <ion-card-title>Stack :</ion-card-title>
+                        <div class="borderBottom"></div>
+                        <ion-card-subtitle id="stackRules" class="cardContainer" />
+                    </ion-card>
+                    <ion-card class="cardFullContainer">
+                        <ion-card-title>Production Rules :</ion-card-title>
+                        <div class="borderBottom"></div>
+                        <ion-card-subtitle id="productionRulesImplemented" class="cardContainer" />
+                    </ion-card>
+                    <ion-card class="cardFullContainer">
+                        <ion-card-title>Derivation Steps :</ion-card-title>
+                        <div class="borderBottom"></div>
+                        <ion-card-subtitle id="derivation" class="cardContainer" />
+                    </ion-card>
+                </div>
+                <div class="rightContainer">
+                    <ion-card class="parseRulesContainer">
+                        <ion-card-title class="tableTitleText">Parse Table</ion-card-title>
+                        <ion-grid id="parseTable" class="tableContainer"></ion-grid>
+                    </ion-card>
+                    <div style="display: flex;">
+                        <ion-card class="cardFullContainer" style="width: 25%;">
+                            <ion-card-title>Action :</ion-card-title>
+                            <div class="borderBottom"></div>
+                            <ion-card-subtitle id="action" class="cardContainer" />
+                        </ion-card>
+                        <ion-card class="cardFullContainer" style="width: 75%;">
+                            <ion-card-title>Expression : <p id="expressionResult"></p>
+                            </ion-card-title>
+                            <div class="borderBottom"></div>
+                            <ion-card-subtitle id="expression" class="cardContainer" />
+                        </ion-card>
+                    </div>
+                </div>
+            </div>
+        </ion-content>
+    </ion-app>
+</body>
+
+</html>
