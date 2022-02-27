@@ -87,7 +87,7 @@ const markAction = (action: string) => {
     }
 
     curentParseTableCell = document.getElementById(`${action}`);
-    console.log(curentParseTableCell.textContent)
+    // console.log(curentParseTableCell.textContent)
     if (curentParseTableCell.textContent == null || curentParseTableCell.textContent.length == 0 || curentParseTableCell.textContent == "" || curentParseTableCell.textContent == undefined) {
         curentParseTableCell.style.backgroundColor = "#eb445a";
     } else if (curentParseTableCell.textContent == "accept") {
@@ -95,7 +95,7 @@ const markAction = (action: string) => {
     } else if (typeof curentParseTableCell.textContent == 'string') {
         curentParseTableCell.style.backgroundColor = "#3880ff";
     }
-    console.log(action);
+    // console.log(action);
 }
 
 const compute = (element: string) => {
