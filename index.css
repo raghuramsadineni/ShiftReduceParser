@@ -82,15 +82,22 @@
     .flexContainer {
         flex-wrap: nowrap;
     }
-}
-
-@media screen and (min-width: 768px) {
     .leftContainer {
         width: 50%;
     }
     
     .rightContainer {
         width: 50%;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .leftContainer {
+        width: 40%;
+    }
+    
+    .rightContainer {
+        width: 60%;
     }
 }
 
